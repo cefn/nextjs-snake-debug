@@ -11,7 +11,6 @@
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@lauf/queue": "^0.1.2",
     "@lauf/store": "^0.1.2",
     "@lauf/store-react": "^0.1.2",
     "next": "^11.0.0",

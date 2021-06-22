@@ -1,5 +1,5 @@
 import { isExpiry, promiseExpiry } from "./delay";
-import { MessageQueue } from "@lauf/queue";
+import { MessageQueue } from "./queue";
 import { followSelector, withSelectorQueue } from "./storeFollow";
 import {
   createAppModel,

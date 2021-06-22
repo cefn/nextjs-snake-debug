@@ -1208,11 +1208,6 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@lauf/queue@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@lauf/queue/-/queue-0.1.2.tgz#e55aef89cb82e3bfa0e428e780d6eab2c670a703"
-  integrity sha512-UNC4FohYtoCNr7uZqm2/tGgF3oi9vivypulw9RARWXOusdqiWrBw0tZKZH9sEycmK8uUDKMVknZWsxcMT60ZNA==
-
 "@lauf/store-react@^0.1.2":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@lauf/store-react/-/store-react-0.1.2.tgz#eb4b0b9b279de16b306471df4368d7adc2a9e93d"

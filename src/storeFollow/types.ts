@@ -1,4 +1,4 @@
-import { MessageQueue } from "@lauf/queue";
+import { MessageQueue } from "../queue";
 
 /** Function to process a queue of values including an initial starting value, leading to
  * a final `Ending` result.
