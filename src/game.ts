@@ -1,6 +1,6 @@
-import { isExpiry, promiseExpiry } from "@lauf/lauf-runner";
+import { isExpiry, promiseExpiry } from "./delay";
 import { MessageQueue } from "@lauf/queue";
-import { followSelector, withSelectorQueue } from "@lauf/store-follow";
+import { followSelector, withSelectorQueue } from "./storeFollow";
 import {
   createAppModel,
   AppModel,
@@ -39,16 +39,18 @@ async function snakeMotionRoutine(appModel: AppModel) {
   await withSelectorQueue(
     gameStore,
     selectMotion,
-    async function (motionQueue, initialMotion) {
+    async (motionQueue, initialMotion) => {
       const { receive } = motionQueue;
       let motion = initialMotion;
       while (true) {
         if (!motion) {
           //snake still: await motion change
           motion = await receive();
+          debugger;
         } else {
           //snake moving: await both step timeout AND motion change
           motion = await moveUntilMotionChange(appModel, motion, motionQueue);
+          debugger;
         }
       }
     }
@@ -70,9 +72,11 @@ async function moveUntilMotionChange(
     const ending = await Promise.race([motionChangePromise, expiryPromise]);
     if (isExpiry(ending)) {
       //step timeout came first wait again
+      debugger;
       continue;
     }
     //motion change finally came
+    debugger;
     return ending;
   }
 }

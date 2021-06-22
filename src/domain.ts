@@ -1,4 +1,4 @@
-import { createQueue, MessageQueue } from "@lauf/queue";
+import { createQueue, MessageQueue } from "./queue";
 import { Immutable, Selector, Store, createStore } from "@lauf/store";
 
 /** GAME STATE */
