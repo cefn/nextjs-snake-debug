@@ -46,11 +46,9 @@ async function snakeMotionRoutine(appModel: AppModel) {
         if (!motion) {
           //snake still: await motion change
           motion = await receive();
-          debugger;
         } else {
           //snake moving: await both step timeout AND motion change
           motion = await moveUntilMotionChange(appModel, motion, motionQueue);
-          debugger;
         }
       }
     }
@@ -72,11 +70,9 @@ async function moveUntilMotionChange(
     const ending = await Promise.race([motionChangePromise, expiryPromise]);
     if (isExpiry(ending)) {
       //step timeout came first wait again
-      debugger;
       continue;
     }
     //motion change finally came
-    debugger;
     return ending;
   }
 }
